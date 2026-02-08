@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial,Helvetica,Sans-Serif;
+}
+body {
+  background: #f9f9f9;
+}
+/*Header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+}
+.search-bar {
+  width: 50%;
+  display: flex;
+}
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+}
+.search-bar button {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #eee;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+.icons span {
+  margin-left: 15px;
+  font-size: 18px;
+}
+/*Layout*/
+.container {
+  display: flex;
+  margin-top: 70px;
+}
+/*Sidebar*/
+.sidebar {
+  width: 200px;
+  background: white;
+  height: 100vh;
+  padding: 20px 10px;
+  position: fixed;
+}
+.sidebar p{
+  margin: 15px 0;
+}
+/*Main*/
+.main {
+  margin-left: 220px;
+  padding: 20px;
+  width: 100%;
+}
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card p{
+  padding: 0 10px;
+}
+.title {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.channel,.views {
+  font-size: 14px;
+  color: gray;
+}
+/*Responsive*/
+@media(max-width:768px) {
+  .sidebar {
+    display: none;
+}
+.main {
+  margin-left: 0;
+}
+}
